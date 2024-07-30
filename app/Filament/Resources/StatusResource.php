@@ -2,17 +2,16 @@
 
 namespace App\Filament\Resources;
 
+use Carbon\Carbon;
 use Filament\Forms;
 use Filament\Tables;
-use Pages\EditStatus;
-use Pages\CreateStatus;
-use Pages\ListStatuses;
+use App\Models\Status;
 use Filament\Forms\Form;
 use App\Models\Applicant;
 use Filament\Tables\Table;
 use Illuminate\Support\Carbon;
-use Filament\Infolists\Infolist;
 use Filament\Resources\Resource;
+use Filament\Tables\Actions\Action;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Section;
 use Filament\Tables\Columns\TextColumn;
@@ -20,13 +19,9 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\DatePicker;
 use Filament\Tables\Filters\SelectFilter;
 use Illuminate\Database\Eloquent\Builder;
-use App\Filament\Exports\ApplicantExporter;
-use Filament\Infolists\Components\TextEntry;
-use Filament\Tables\Actions\ExportAction;   
-use Filament\Actions\Exports\Enums\ExportFormat;
-use App\Filament\Resources\ApplicantResource\Pages;
+use App\Filament\Resources\StatusResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\ApplicantResource\RelationManagers;
+use App\Filament\Resources\StatusResource\RelationManagers;
 
 class StatusResource extends Resource
 {
@@ -241,9 +236,9 @@ class StatusResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => ListStatuses::route('/'),
-            'create' => CreateStatus::route('/create'),
-            'edit' => EditStatus::route('/{record}/edit'),
+            'index' => Pages\ListStatuses::route('/'),
+            'create' => Pages\CreateStatus::route('/create'),
+            'edit' => Pages\EditStatus::route('/{record}/edit'),
         ];
     }
 }
