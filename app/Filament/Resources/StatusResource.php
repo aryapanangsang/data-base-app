@@ -182,6 +182,33 @@ class StatusResource extends Resource
                 TextInput::make('reference')
                 ->label('Referensi'),
             ])->columns(3),
+
+            Forms\Components\Section::make('Data Processed')
+                ->schema([
+                    Forms\Components\Select::make('company_id')                    
+                        ->relationship('company', 'company_name'),
+                    Forms\Components\TextInput::make('pre_test')                    
+                        ->maxLength(255)
+                        ->numeric(),
+                    Forms\Components\TextInput::make('test1')
+                        ->maxLength(255)
+                        ->numeric(),
+                    Forms\Components\TextInput::make('test2')
+                        ->maxLength(255),
+                    Forms\Components\TextInput::make('post_test1')
+                        ->maxLength(255),
+                    Forms\Components\TextInput::make('post_test2')
+                        ->maxLength(255),
+                    Forms\Components\DatePicker::make('mcu_date'),
+                    Forms\Components\TextInput::make('mcu_result')
+                        ->maxLength(255),
+                    Forms\Components\DatePicker::make('join_date'),
+                    Forms\Components\DatePicker::make('finished'),
+                    Forms\Components\Select::make('status_id')
+                    ->relationship('status', 'status_name'),
+                    Forms\Components\TextInput::make('information')
+                        ->maxLength(255),
+                ])->columns(3),
         ]);
     }
 
