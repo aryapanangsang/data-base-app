@@ -4,6 +4,9 @@ namespace App\Filament\Resources;
 
 use Filament\Forms;
 use Filament\Tables;
+use Pages\EditStatus;
+use Pages\CreateStatus;
+use Pages\ListStatuses;
 use Filament\Forms\Form;
 use App\Models\Applicant;
 use Filament\Tables\Table;
@@ -238,9 +241,9 @@ class StatusResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListStatuses::route('/'),
-            'create' => Pages\CreateStatus::route('/create'),
-            'edit' => Pages\EditStatus::route('/{record}/edit'),
+            'index' => ListStatuses::route('/'),
+            'create' => CreateStatus::route('/create'),
+            'edit' => EditStatus::route('/{record}/edit'),
         ];
     }
 }
