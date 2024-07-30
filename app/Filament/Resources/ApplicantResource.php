@@ -158,20 +158,16 @@ class ApplicantResource extends Resource
                                 ->description('')
                                 ->schema([
                                     TextInput::make('company_name')
-                                    ->label('Nama Perusahaan')
-                                    ->required(),
+                                    ->label('Nama Perusahaan'),
                                     TextInput::make('salary')
                                     ->label('Upah / Gaji')
                                     ->numeric()
-                                    ->default(0)
-                                    ->required(),  
+                                    ->default(0),  
                                     TextInput::make('position')
-                                    ->label('Posisi / Bagian / Jabatan')                                    
-                                    ->required(),  
+                                    ->label('Posisi / Bagian / Jabatan'),  
                                     TextInput::make('duration')
                                     ->label('Masa Kerja')
-                                    ->placeholder('Cth : 2 Bulan | 1 Tahun')                                    
-                                    ->required(),                                 
+                                    ->placeholder('Cth : 2 Bulan | 1 Tahun'),                                 
                                 ])
                                 ->columns(2),                                
                         TextInput::make('skills')
