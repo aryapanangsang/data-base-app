@@ -22,13 +22,13 @@
                 <table border="1px">
                     <tr>
                         <td class="x">
-                            @if ($applicants->id < 9)
+                            {{-- @if ($applicants->id < 9)
                                 {{ 0 . 0 . $applicants->id }}
                             @elseif($applicants->id > 99)
                                 {{ 0 . 0 . 0 . $applicants->id }}
                             @else
                                 {{ $applicants->id }}
-                            @endif
+                            @endif --}}
                         </td>
                         <td>/FP/LPK/</td>
                         <td class="x">
@@ -120,15 +120,15 @@
                     </tr>
                     <tr>
                         <td class="label">Status Vaksin</td>
-                        <td>: {{ $applicants->caccine }}</td>
+                        <td>: {{ $applicants->vaccine }}</td>
                     </tr>
                     <tr>
                         <td class="label">Tinggi Badan</td>
-                        <td>: {{ $applicants->height }}</td>
+                        <td>: {{ $applicants->height }} Cm</td>
                     </tr>
                     <tr>
                         <td class="label">Berat Badan</td>
-                        <td>: {{ $applicants->weight }}</td>
+                        <td>: {{ $applicants->weight }} Kg</td>
                     </tr>
                     <tr>
                         <td class="label">Ukuran Seragam</td>
@@ -143,7 +143,7 @@
                 <table>
                     <tr>
                         <td class="label">Nama Sekolah</td>
-                        <td>: {{ $applicants->educational_level }}</td>
+                        <td>: {{ $applicants->education_level }}</td>
                     </tr>
                     <tr>
                         <td class="label">Tahun Lulus</td>
