@@ -19,9 +19,9 @@
                 <h1>FORMULIR PENDAFTARAN</h1>
             </div>
             <div class="noreg">
-                <table border="1px">
+                <table border="1px" style="margin-top: 3px">
                     <tr>
-                        <td class="x" style="width:20px">
+                        <td class="x" style="width:10px; border:1px solid black">
                             {{-- @if ($applicants->id < 9)
                                 {{ 0 . 0 . $applicants->id }}
                             @elseif($applicants->id > 99)
@@ -30,15 +30,17 @@
                                 {{ $applicants->id }}
                             @endif --}}
                         </td>
-                        <td>/FP/LPK/</td>
-                        <td class="x">
-                            @if (\Carbon\Carbon::create($applicants->created_at)->isoFormat('m') < 9)
-                                {{ 0 . \Carbon\Carbon::create($applicants->created_at)->isoFormat('m') }}
+                        <td class="x" style="width:10px; border:1px solid black"></td>
+                        <td class="x" style="width:10px; border:1px solid black"></td>
+                        <td style=" border:1px solid black">/FP/LPK/</td>
+                        <td class="x" style=" border:1px solid black">
+                            @if (\Carbon\Carbon::create($applicants->created_at)->isoFormat('M') < 9)
+                                {{ 0 . \Carbon\Carbon::create($applicants->created_at)->isoFormat('M') }}
                             @else
-                                {{ \Carbon\Carbon::create($applicants->created_at)->isoFormat('m') }}
+                                {{ \Carbon\Carbon::create($applicants->created_at)->isoFormat('M') }}
                             @endif
                         </td>
-                        <td class="y">
+                        <td class="y" style=" border:1px solid black">
                             {{ \Carbon\Carbon::create($applicants->created_at)->isoFormat('Y') }}
                         </td>
                     </tr>
