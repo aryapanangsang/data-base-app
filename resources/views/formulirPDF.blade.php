@@ -21,7 +21,7 @@
             <div class="noreg">
                 <table border="1px">
                     <tr>
-                        <td class="x" style="width:50px">
+                        <td class="x" style="width:20px">
                             {{-- @if ($applicants->id < 9)
                                 {{ 0 . 0 . $applicants->id }}
                             @elseif($applicants->id > 99)
