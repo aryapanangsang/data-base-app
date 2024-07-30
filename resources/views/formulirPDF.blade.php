@@ -21,7 +21,7 @@
             <div class="noreg">
                 <table border="1px">
                     <tr>
-                        <td class="x">
+                        <td class="x" style="width:50px">
                             {{-- @if ($applicants->id < 9)
                                 {{ 0 . 0 . $applicants->id }}
                             @elseif($applicants->id > 99)
@@ -32,10 +32,10 @@
                         </td>
                         <td>/FP/LPK/</td>
                         <td class="x">
-                            @if (\Carbon\Carbon::create($applicants->created_at)->isoFormat('M') < 9)
-                                {{ 0 . \Carbon\Carbon::create($applicants->created_at)->isoFormat('M') }}
+                            @if (\Carbon\Carbon::create($applicants->created_at)->isoFormat('m') < 9)
+                                {{ 0 . \Carbon\Carbon::create($applicants->created_at)->isoFormat('m') }}
                             @else
-                                {{ \Carbon\Carbon::create($applicants->created_at)->isoFormat('M') }}
+                                {{ \Carbon\Carbon::create($applicants->created_at)->isoFormat('m') }}
                             @endif
                         </td>
                         <td class="y">
