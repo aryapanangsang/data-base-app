@@ -7,156 +7,38 @@
     <title>Formulir Pendaftaran</title>
     {{-- <link rel="stylesheet" href="style.css" type="text/css"> --}}
     {{-- <link rel="stylesheet" href="{{ asset('style.css') }}"> --}}
-    <style>
-        * {
-            padding: 0;
-        }
-
-        body {
-            font-family: "Times New Roman", Times, serif;
-        }
-
-        @page {
-            margin: 20px 25px;
-        }
-
-        .container {
-            width: 100%;
-            height: 90%;
-            margin: 0 auto;
-            border: 1px solid #000;
-            padding: 10px 5px;
-        }
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center;
-        }
-
-        .logo img {
-            width: 400px;
-            margin-bottom: -15px;
-        }
-
-        .title {
-            flex-grow: 1;
-            margin: 0 20px;
-            font-size: 5px;
-        }
-
-        .noreg {
-            margin-top: -10px;
-            display: flex;
-            justify-content: center;
-            width: 100%;
-        }
-
-        .noreg table {
-            border-width: 0;
-            border-color: #000;
-            margin: 0 auto;
-        }
-
-
-
-        section h4 {
-            font-size: 14px;
-        }
-
-        h5 {
-            font-size: 12px;
-            font-style: normal;
-        }
-
-        /* Tabel Data */
-
-        table {
-            margin-top: -20px;
-        }
-
-        table td {
-            padding-left: 4px;
-            padding-right: 4px;
-            font-size: 12px;
-        }
-
-        table .label {
-            width: 115px;
-        }
-
-
-        .epilog {
-            margin-top: -15px;
-        }
-
-        .epilog .tgl_daftar {
-            margin-top: -20px;
-            font-size: 11px;
-            text-align: right;
-            margin-right: 11px;
-        }
-
-
-
-        .signature {
-            margin-top: 10px !important;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto;
-        }
-
-        .signature table .pihak_kedua {
-            padding-right: 550px;
-            margin-bottom: 250px;
-        }
-
-        .signature_name {
-            margin-top: 125px !important;
-        }
-
-
-        /* Form */
-
-        form h3 {
-            text-align: center;
-        }
-
-        .field {
-            margin-bottom: 15px;
-        }
-
-        .field label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .field input[type="text"] {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-    </style>
     @vite('resources/css/app.css')
 </head>
 
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="logo">
-                <img src="img/kop.jpg" alt="Logo">
+    <div class="container"
+        style="width: 100%;   
+                height: 90%; 
+                margin: 0 auto;
+                border: 1px solid #000;
+                padding: 10px 5px;">
+        <div class="header"
+            style="display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;">
+            <div class="logo" style="display: flex; justify-content: center">
+                <img src="img/kop.jpg" alt="Logo" style="width:650px">
             </div>
-            <div class="title">
-                <h1>FORMULIR PENDAFTARAN</h1>
+            <div class="title" style="margin-top: -10px">
+                <h1 style="font-size: 15px">FORMULIR PENDAFTARAN</h1>
             </div>
-            <div class="noreg">
-                <table border="1px" style="margin-top: 3px">
+            <div class="noreg"
+                style="margin-top: -10px;
+                display: flex;
+                justify-content: center;
+                width: 100%; ">
+                <table
+                    style="margin-top: 3px border-width: 0;
+                    border-color: #000;  
+                    margin: 0 auto;   ">
                     <tr>
-                        <td class="x" style="width:10px; border:1px solid black">
+                        <td class="x" style="width:10px; border:1px solid black; padding: 0px 5px;">
                             {{-- @if ($applicants->id < 9)
                                 {{ 0 . 0 . $applicants->id }}
                             @elseif($applicants->id > 99)
@@ -165,17 +47,17 @@
                                 {{ $applicants->id }}
                             @endif --}}
                         </td>
-                        <td class="x" style="width:10px; border:1px solid black"></td>
-                        <td class="x" style="width:10px; border:1px solid black"></td>
-                        <td style=" border:1px solid black">/FP/LPK/</td>
-                        <td class="x" style=" border:1px solid black">
+                        <td class="x" style="width:10px; border:1px solid black; padding: 0px 5px;"></td>
+                        <td class="x" style="width:10px; border:1px solid black; padding: 0px 5px;"></td>
+                        <td style=" border:1px solid black; padding: 0px 5px;">/FP/LPK/</td>
+                        <td class="x" style=" border:1px solid black; padding: 0px 5px;">
                             @if (\Carbon\Carbon::create($applicants->created_at)->isoFormat('M') < 9)
                                 {{ 0 . \Carbon\Carbon::create($applicants->created_at)->isoFormat('M') }}
                             @else
                                 {{ \Carbon\Carbon::create($applicants->created_at)->isoFormat('M') }}
                             @endif
                         </td>
-                        <td class="y" style=" border:1px solid black">
+                        <td class="y" style=" border:1px solid black; padding: 0px 5px;">
                             {{ \Carbon\Carbon::create($applicants->created_at)->isoFormat('Y') }}
                         </td>
                     </tr>
