@@ -4,6 +4,9 @@
 body {
     font-family: "Times New Roman", Times, serif;
 }
+h1{
+    font-size: 15px;
+}
 
 @page {
     margin: 20px 25px;
