@@ -27,7 +27,7 @@
             <div class="logo" style="display: flex; justify-content: center">
                 <img src="img/kop.jpg" alt="Logo" style="width:650px">
             </div>
-            <div class="title" style="margin-bottom: 5px">
+            <div class="title" style="margin-bottom: 20px">
                 <h1 style="font-size: 15px">FORMULIR PENDAFTARAN</h1>
             </div>
             <div class="noreg"
