@@ -27,7 +27,7 @@
             <div class="logo" style="display: flex; justify-content: center">
                 <img src="img/kop.jpg" alt="Logo" style="width:650px">
             </div>
-            <div class="title" style="margin-top:10px; margin-bottom: 10px">
+            <div class="title" style="margin-bottom: 5px">
                 <h1 style="font-size: 15px">FORMULIR PENDAFTARAN</h1>
             </div>
             <div class="noreg"
@@ -67,9 +67,9 @@
             </div>
         </div>
 
-        <form>
+        <form style="margin-top: -10px">
             <section>
-                <h4 class="personal" style="margin-bottom: 10px">I. PERSONAL DATA</h4>
+                <h4 class="personal" style="margin-bottom: 20px">I. PERSONAL DATA</h4>
                 <table>
                     <tr>
                         <td class="label">Nama</td>
@@ -160,7 +160,9 @@
                         <td>: {{ $applicants->shoes_size }}</td>
                     </tr>
                 </table>
-                <h4 class="pendidikan">II. PENDIDIKAN TERAKHIR</h4>
+                <div class="label" style="margin-top:-10px">
+                    <h4 class="pendidikan">II. PENDIDIKAN TERAKHIR</h4>
+                </div>
                 <table>
                     <tr>
                         <td class="label">Nama Sekolah</td>
@@ -183,7 +185,9 @@
                         <td>: {{ $applicants->skills }}</td>
                     </tr>
                 </table>
-                <h4 class="pengalaman">III. Pengalaman </h4>
+                <div class="label" style="margin-top:-10px">
+                    <h4 class="pengalaman">III. Pengalaman </h4>
+                </div>
                 <table>
                     <tr>
                         <td class="label">Nama Perusahaan</td>
