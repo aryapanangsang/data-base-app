@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Formulir Pendaftaran</title>
-    {{-- <link rel="stylesheet" href="style.css" type="text/css"> --}}
+    <link rel="stylesheet" href="style.css" type="text/css">
     {{-- <link rel="stylesheet" href="{{ asset('style.css') }}"> --}}
     @vite('resources/css/app.css')
 </head>
@@ -25,19 +26,12 @@
             <div class="logo" style="display: flex; justify-content: center">
                 <img src="img/kop.jpg" alt="Logo" style="width:650px">
             </div>
-            <div class="label"
-                style="margin-top: -10px;
-            display: flex;
-            justify-content: center;
-            width: 100%; ">
-                <table style="text-align: center; margin:0px auto">
-                    <tr>
-                        <td style="font-size: 15px; font-weight: bold;">FORMULIR PENDAFTARAN</td>
-                    </tr>
-                </table>
+            <div class="title" style="margin-top: -10px">
+                <h1 style="font-size: 15px">FORMULIR PENDAFTARAN</h1>
             </div>
             <div class="noreg"
-                style="display: flex;
+                style="margin-top: -10px;
+                display: flex;
                 justify-content: center;
                 width: 100%; ">
                 <table
@@ -74,12 +68,7 @@
 
         <form>
             <section>
-                <table>
-                    <tr>
-                        <td style="font-size: 15px; font-weight: bold">I. PERSONAL DATA</h4>
-                        </td>
-                    </tr>
-                </table>
+                <h4 class="personal">I. PERSONAL DATA</h4>
                 <table>
                     <tr>
                         <td class="label">Nama</td>
