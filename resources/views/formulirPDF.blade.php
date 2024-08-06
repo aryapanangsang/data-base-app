@@ -26,7 +26,7 @@
             <div class="logo" style="display: flex; justify-content: center">
                 <img src="img/kop.jpg" alt="Logo" style="width:650px">
             </div>
-            <div class="title" style="margin-top: -10px">
+            <div class="title" style="margin-top:10px; margin-bottom: 10px">
                 <h1 style="font-size: 15px">FORMULIR PENDAFTARAN</h1>
             </div>
             <div class="noreg"
@@ -68,7 +68,7 @@
 
         <form>
             <section>
-                <h4 class="personal">I. PERSONAL DATA</h4>
+                <h4 class="personal" style="margin-bottom: 10px">I. PERSONAL DATA</h4>
                 <table>
                     <tr>
                         <td class="label">Nama</td>
