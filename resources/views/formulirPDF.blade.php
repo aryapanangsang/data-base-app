@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Formulir Pendaftaran</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
+    {{-- <link rel="stylesheet" href="style.css" type="text/css"> --}}
     {{-- <link rel="stylesheet" href="{{ asset('style.css') }}"> --}}
+    <link href="{{ public_path('style.css') }}" rel="stylesheet">
     @vite('resources/css/app.css')
 </head>
 
