@@ -160,7 +160,7 @@
                         <td>: {{ $applicants->shoes_size }}</td>
                     </tr>
                 </table>
-                <div class="label" style="margin-top:-10px">
+                <div class="label">
                     <h4 class="pendidikan">II. PENDIDIKAN TERAKHIR</h4>
                 </div>
                 <table>
@@ -185,7 +185,7 @@
                         <td>: {{ $applicants->skills }}</td>
                     </tr>
                 </table>
-                <div class="label" style="margin-top:-10px">
+                <div class="label">
                     <h4 class="pengalaman">III. Pengalaman </h4>
                 </div>
                 <table>
@@ -210,6 +210,7 @@
                     <h5>Demikian formulir ini saya isi dengan sebenarnya. Apabila saya berbohong, maka saya siap
                         dikenakan
                         sanksi.</h5>
+                    <br>
                     <div class="tgl_daftar">
                         <p>Cikarang, {{ $tgl_daftar }}</p>
                     </div>
