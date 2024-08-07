@@ -223,13 +223,20 @@
                     <table>
                         <tr>
                             <td class="pihak_kedua" style="width: 15px">Pihak Kedua</td>
-                            <td class="pihak_satu" style=" width: 15px; margin-left: -50px">Pihak Pertama</td>
                         </tr>
-                        <br>
                         <br>
                         <br>
                         <tr class="signature_name">
                             <td class="pihak_kedua">Pihak Kedua</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td class="pihak_satu" style=" width: 15px; margin-left: -50px">Pihak Pertama</td>
+                        </tr>
+                        <br>
+                        <br>
+                        <tr class="signature_name">
                             <td class="pihak_satu">LPK PBI</td>
                         </tr>
                     </table>

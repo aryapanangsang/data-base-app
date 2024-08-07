@@ -98,13 +98,13 @@ table .label{
 
 
 
-/* .signature{
+.signature{
     margin-top: 10px !important;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-} */
+}
 
 /* .signature table .pihak_kedua, .pihak_satu{
     padding-right: 480px;
