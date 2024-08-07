@@ -25,7 +25,7 @@
             align-items: center;
             text-align: center;">
             <div class="logo" style="display: flex; justify-content: center">
-                <img src="img/kop.jpg" alt="Logo" style="width:650px">
+                <img src="img/kop.jpg" alt="Logo" style="width:400">
             </div>
             <div class="title" style="margin-bottom: 20px">
                 <h1 style="font-size: 15px">FORMULIR PENDAFTARAN</h1>
@@ -69,7 +69,9 @@
 
         <form style="margin-top: -10px">
             <section>
-                <h4 class="personal" style="margin-bottom: 20px">I. PERSONAL DATA</h4>
+                <div class="label">
+                    <h4 class="personal" style="margin-bottom: 20px">I. PERSONAL DATA</h4>
+                </div>
                 <table>
                     <tr>
                         <td class="label">Nama</td>
@@ -205,6 +207,7 @@
                         <td class="label">Masa Kerja</td>
                         <td>: {{ $applicants->duration }}</td>
                     </tr>
+                    <br>
                 </table>
                 <div class="epilog">
                     <h5>Demikian formulir ini saya isi dengan sebenarnya. Apabila saya berbohong, maka saya siap

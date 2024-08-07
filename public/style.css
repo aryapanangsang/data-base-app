@@ -26,10 +26,10 @@ h1{
     text-align: center;
 }
 
-.logo img {
-    width: 400px;
+/* .logo img {
+    width: 250px;
     margin-bottom: -15px;
-}
+} */
 
 .title {        
     flex-grow: 1;
@@ -59,6 +59,7 @@ section h4{
 section .label{
     font-size: 14px;
     margin-bottom: 20px;
+    font-weight: bold;
     
 }
 
