@@ -70,7 +70,7 @@
         <form style="margin-top: -10px">
             <section>
                 <div class="labels">
-                    <h4 class="personal" style="margin-bottom: 20px ; font-weight: bold">I. PERSONAL DATA</h4>
+                    <h4 class="personal" style="font-weight: bold">I. PERSONAL DATA</h4>
                 </div>
                 <table>
                     <tr>
@@ -162,7 +162,7 @@
                         <td>: {{ $applicants->shoes_size }}</td>
                     </tr>
                 </table>
-                <br>
+
                 <div class="labels">
                     <h4 class="pendidikan" style="font-weight: bold">II. PENDIDIKAN TERAKHIR</h4>
                 </div>
@@ -188,7 +188,6 @@
                         <td>: {{ $applicants->skills }}</td>
                     </tr>
                 </table>
-                <br>
                 <div class="labels">
                     <h4 class="pengalaman" style="font-weight: bold">III. Pengalaman </h4>
                 </div>

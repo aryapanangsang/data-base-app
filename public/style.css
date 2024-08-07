@@ -60,6 +60,7 @@ section .labels{
     font-size: 14px;
     margin-bottom: 20px;
     font-weight: bold;
+    margin-top: 10px;
     
 }
 
@@ -97,18 +98,18 @@ table .label{
 
 
 
-.signature{
+/* .signature{
     margin-top: 10px !important;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-}
+} */
 
-.signature table .pihak_kedua, .pihak_satu{
+/* .signature table .pihak_kedua, .pihak_satu{
     padding-right: 480px;
     margin-bottom: 250px;
-}
+} */
 
 .signature_name{
     margin-top: 125px !important;
