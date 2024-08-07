@@ -247,9 +247,10 @@ class StatusResource extends Resource
             ->actions([
                 Tables\Actions\ViewAction::make(),
                 // Tables\Actions\EditAction::make(),
-                // Action::make('Download')
-                //     ->url(fn(Applicant $record)=>route('download.applicant',$record))
-                //     ->openUrlInNewTab(),
+                Action::make('Download')
+                    ->label('Formulir')
+                    ->url(fn(Applicant $record)=>route('download.applicant',$record))
+                    ->openUrlInNewTab(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
