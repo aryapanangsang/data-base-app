@@ -25,7 +25,7 @@
             align-items: center;
             text-align: center;">
             <div class="logo" style="display: flex; justify-content: center">
-                <img src="img/kop.jpg" alt="Logo" style="width:400">
+                <img src="img/kop.jpg" alt="Logo" style="width:250">
             </div>
             <div class="title" style="margin-bottom: 20px">
                 <h1 style="font-size: 15px">FORMULIR PENDAFTARAN</h1>
@@ -222,7 +222,7 @@
                 <div class="signature">
                     <table>
                         <tr>
-                            <td class="pihak_kedua">Pihak Kedua</td>
+                            <td class="pihak_kedua" style="width: 150px">Pihak Kedua</td>
                             <td class="pihak_satu">Pihak Pertama</td>
                         </tr>
                         <br>
