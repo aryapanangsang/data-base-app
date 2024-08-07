@@ -220,26 +220,30 @@
                     </div>
                 </div>
                 <div class="signature">
-                    <table>
-                        <tr>
-                            <td class="pihak_kedua" style="width: 15px">Pihak Kedua</td>
-                        </tr>
-                        <br>
-                        <br>
-                        <tr class="signature_name">
-                            <td class="pihak_kedua">Pihak Kedua</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <td class="pihak_satu" style=" width: 15px; margin-left: -50px">Pihak Pertama</td>
-                        </tr>
-                        <br>
-                        <br>
-                        <tr class="signature_name">
-                            <td class="pihak_satu">LPK PBI</td>
-                        </tr>
-                    </table>
+                    <div class="pihak1">
+                        <table>
+                            <tr>
+                                <td class="pihak_kedua" style="width: 15px">Pihak Kedua</td>
+                            </tr>
+                            <br>
+                            <br>
+                            <tr class="signature_name">
+                                <td class="pihak_kedua">Pihak Kedua</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="pihak2">
+                        <table>
+                            <tr>
+                                <td class="pihak_satu" style=" width: 15px; margin-left: -50px">Pihak Pertama</td>
+                            </tr>
+                            <br>
+                            <br>
+                            <tr class="signature_name">
+                                <td class="pihak_satu">LPK PBI</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </section>
         </form>
