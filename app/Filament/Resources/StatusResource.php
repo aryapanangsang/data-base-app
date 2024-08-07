@@ -216,6 +216,11 @@ class StatusResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('created_at')->label('Tanggal Daftar')
+                ->formatStateUsing(function ($state, Applicant $order) {
+                    $tgl_daftar = Carbon::create($order->created_at);
+                    return $tgl_daftar->isoFormat('D MMMM Y');
+                }),
                 TextColumn::make('appplicant_name')->label('Nama')
                     ->searchable(),
                 TextColumn::make('gender')->label('Jenis Kelamin'),
@@ -227,7 +232,7 @@ class StatusResource extends Resource
                 TextColumn::make('company.company_name')->label('Perusahaan'),
                 TextColumn::make('status.status_name')->label('Status')
                     ->searchable()
-                    ->sortable(),
+                    ->sortable(),               
             ])
             ->filters([
                 // SelectFilter::make('company_id')
@@ -240,10 +245,11 @@ class StatusResource extends Resource
                 ->default(1)    
             ])
             ->actions([
+                Tables\Actions\ViewAction::make(),
                 // Tables\Actions\EditAction::make(),
-                Action::make('Download')
-                    ->url(fn(Applicant $record)=>route('download.applicant',$record))
-                    ->openUrlInNewTab(),
+                // Action::make('Download')
+                //     ->url(fn(Applicant $record)=>route('download.applicant',$record))
+                //     ->openUrlInNewTab(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

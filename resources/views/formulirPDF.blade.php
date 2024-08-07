@@ -53,10 +53,10 @@
                         <td class="x" style="width:10px; border:1px solid black; padding: 0px 5px;"></td>
                         <td style=" border:1px solid black; padding: 0px 5px;">/FP/LPK/</td>
                         <td class="x" style=" border:1px solid black; padding: 0px 5px;">
-                            @if (\Carbon\Carbon::create($applicants->created_at)->isoFormat('M') < 9)
-                                {{ 0 . \Carbon\Carbon::create($applicants->created_at)->isoFormat('M') }}
+                            @if (\Carbon\Carbon::create($tgl_daftar)->isoFormat('M') < 9)
+                                {{ 0 . \Carbon\Carbon::create($tgl_daftar)->isoFormat('M') }}
                             @else
-                                {{ \Carbon\Carbon::create($applicants->created_at)->isoFormat('M') }}
+                                {{ \Carbon\Carbon::create($tgl_daftar)->isoFormat('M') }}
                             @endif
                         </td>
                         <td class="y" style=" border:1px solid black; padding: 0px 5px;">
@@ -189,7 +189,7 @@
                     </tr>
                 </table>
                 <div class="labels">
-                    <h4 class="pengalaman" style="font-weight: bold">III. Pengalaman </h4>
+                    <h4 class="pengalaman" style="font-weight: bold">III. PENGALAMAN MAGANG / KERJA </h4>
                 </div>
                 <table>
                     <tr>

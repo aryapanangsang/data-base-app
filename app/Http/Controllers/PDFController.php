@@ -58,8 +58,8 @@ class PDFController extends Controller
         //     'applicants' => $applicants,            
         // ];
         $pdf = PDF::loadView('pengantarPDF', compact('applicants'))->setPaper('a4', 'potret');          
-        // $named = 'Formulir' . ' ' . $applicants->appplicant_name;
-        // $format = $named . '.pdf';
-        return $pdf->stream('pengantar');
+        $named = 'Pengantar MCU' . ' ' . Carbon::create($tgl_mcu)->isoFormat('D MMMM Y');
+        $format = $named . '.pdf';
+        return $pdf->stream($format);
     }
 }

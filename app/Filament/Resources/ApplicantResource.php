@@ -224,6 +224,11 @@ class ApplicantResource extends Resource
             //         ])
             // ])
             ->columns([                                            
+                Tables\Columns\TextColumn::make('created_at')->label('Tanggal Daftar')
+                ->formatStateUsing(function ($state, Applicant $order) {
+                    $tgl_daftar = Carbon::create($order->created_at);
+                    return $tgl_daftar->isoFormat('D MMMM Y');
+                }),
                 Tables\Columns\TextColumn::make('appplicant_name')->label('Nama')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('gender')->label('Jenis Kelamin'),
