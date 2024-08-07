@@ -235,7 +235,7 @@
                     <div class="pihak1">
                         <table>
                             <tr>
-                                <td class="pihak_satu" style=" width: 35px; margin-left: -50px">Pihak Pertama</td>
+                                <td class="pihak_satu" style=" width: 35px; ">Pihak Pertama</td>
                             </tr>
                             <br>
                             <br>
