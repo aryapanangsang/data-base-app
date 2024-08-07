@@ -69,7 +69,7 @@ return new class extends Migration
             $table->string('information')->nullable();            
             $table->timestamps();
         });
-    }
+    } 
 
     /**
      * Reverse the migrations.
