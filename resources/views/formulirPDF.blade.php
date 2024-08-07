@@ -223,7 +223,7 @@
                     <table>
                         <tr>
                             <td class="pihak_kedua" style="width: 150px">Pihak Kedua</td>
-                            <td class="pihak_satu">Pihak Pertama</td>
+                            <td class="pihak_satu" style="margin-left: -50px">Pihak Pertama</td>
                         </tr>
                         <br>
                         <br>
