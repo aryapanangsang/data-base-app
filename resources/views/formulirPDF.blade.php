@@ -220,7 +220,7 @@
                     </div>
                 </div>
                 <div class="signature">
-                    <div class="pihak1">
+                    <div class="pihak2">
                         <table>
                             <tr>
                                 <td class="pihak_kedua" style="width: 15px">Pihak Kedua</td>
@@ -232,7 +232,7 @@
                             </tr>
                         </table>
                     </div>
-                    <div class="pihak2">
+                    <div class="pihak1">
                         <table>
                             <tr>
                                 <td class="pihak_satu" style=" width: 15px; margin-left: -50px">Pihak Pertama</td>

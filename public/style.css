@@ -106,6 +106,12 @@ table .label{
     margin: 0 auto;
 }
 
+.signature .pihak1{
+    margin-top: -120px;
+    margin-left: 350px;
+
+}
+
 /* .signature table .pihak_kedua, .pihak_satu{
     padding-right: 480px;
     margin-bottom: 250px;
