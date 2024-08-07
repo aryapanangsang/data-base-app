@@ -56,7 +56,7 @@ section h4{
     font-size: 14px;
 }
 
-section .label{
+section .labels{
     font-size: 14px;
     margin-bottom: 20px;
     font-weight: bold;
@@ -80,7 +80,7 @@ table td{
 }
 
 table .label{
-    width: 115px;
+    width: 118px;
 }
 
 
@@ -106,7 +106,7 @@ table .label{
 }
 
 .signature table .pihak_kedua{
-    padding-right: 550px;
+    padding-right: 480px;
     margin-bottom: 250px;
 }
 
