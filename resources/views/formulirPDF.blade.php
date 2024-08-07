@@ -228,7 +228,7 @@
                             <br>
                             <br>
                             <tr class="signature_name">
-                                <td class="pihak_kedua">Pihak Kedua</td>
+                                <td class="pihak_kedua">_______________</td>
                             </tr>
                         </table>
                     </div>
