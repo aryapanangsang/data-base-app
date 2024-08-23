@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use Carbon\Carbon;
 use Filament\Forms;
 use Livewire\Component;
 use Filament\Forms\Form;
@@ -9,6 +10,7 @@ use App\Models\Applicant;
 use App\Mail\FormSubmitted;
 use Filament\Forms\Components\Card;
 use Illuminate\Support\Facades\Mail;
+use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Contracts\HasForms;
@@ -60,6 +62,10 @@ class Home extends Component implements HasForms
     public $skills ='';
     public $office ='';
     public $reference ='';    
+
+    // 
+
+    public $noreg = '';
    
 
     public static function form(Form $form): Form
@@ -202,15 +208,15 @@ class Home extends Component implements HasForms
                                 ])
                                 ->columns(2),                                
                         TextInput::make('skills')
-                        ->label('Skill / Keahlian')
-                        ->placeholder('Cth : Welding,Injection'),                                                                                                   
+                            ->label('Skill / Keahlian')
+                            ->placeholder('Cth : Welding,Injection'),                                                                                                   
                         Select::make('office')
                             ->label('Kantor Tujuan')
                             ->options([
                                 'Cikarang' => 'Cikarang',
                                 'Purwakarta' => 'Purwakarta'
                             ])
-                            ->required(),                        
+                            ->required(),                                                                                                       
                 ])->columns(2),                
             ]);
         
@@ -224,7 +230,8 @@ class Home extends Component implements HasForms
 
     public function save(): void
     {      
-        $data = $this->form->getState();                  
+        $data = $this->form->getState();  
+        $data['noreg'] = Carbon::now();    
         Applicant::insert($data);
         // Alert::success('Frmulir Berhasil Disimpan', 'Silahkan ');
         Mail::to($this->email)->send(new FormSubmitted($data));

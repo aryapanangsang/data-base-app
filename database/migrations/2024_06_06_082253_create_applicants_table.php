@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('applicants', function (Blueprint $table) {
             // Primary Data
             $table->id();            
-            $table->string('noreg')->nullable();
+            $table->date('noreg')->nullable();
             $table->string('appplicant_name');
             $table->string('identity_number')->unique();
             $table->string('npwp');

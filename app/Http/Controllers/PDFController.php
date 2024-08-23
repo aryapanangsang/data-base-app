@@ -30,8 +30,8 @@ class PDFController extends Controller
     {    
         Carbon::setLocale('id');
          $applicants = Applicant::find($id);         
-         $tgl_daftar = Carbon::create($applicants->birth_of_date)->isoFormat('D MMMM Y');          
-         $tgl_lahir = Carbon::create($applicants->created_at)->isoFormat('D MMMM Y');          
+         $tgl_lahir = Carbon::create($applicants->birth_of_date)->isoFormat('D MMMM Y');          
+         $tgl_daftar = Carbon::create($applicants->noreg)->isoFormat('D MMMM Y');          
          $data = [
             'birth_of_date' => $tgl_lahir,        
             'applicants' => $applicants,

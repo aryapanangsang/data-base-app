@@ -53,14 +53,14 @@
                         <td class="x" style="width:10px; border:1px solid black; padding: 0px 5px;"></td>
                         <td style=" border:1px solid black; padding: 0px 5px;">/FP/LPK/</td>
                         <td class="x" style=" border:1px solid black; padding: 0px 5px;">
-                            @if (\Carbon\Carbon::create($tgl_daftar)->isoFormat('M') < 9)
-                                {{ 0 . \Carbon\Carbon::create($tgl_daftar)->isoFormat('M') }}
+                            @if (\Carbon\Carbon::create($applicants->noreg)->isoFormat('M') < 9)
+                                {{ 0 . \Carbon\Carbon::create($applicants->noreg)->isoFormat('M') }}
                             @else
-                                {{ \Carbon\Carbon::create($tgl_daftar)->isoFormat('M') }}
+                                {{ \Carbon\Carbon::create($applicants->noreg)->isoFormat('M') }}
                             @endif
                         </td>
                         <td class="y" style=" border:1px solid black; padding: 0px 5px;">
-                            {{ \Carbon\Carbon::create($applicants->created_at)->isoFormat('Y') }}
+                            {{ \Carbon\Carbon::create($applicants->noreg)->isoFormat('Y') }}
                         </td>
                     </tr>
                 </table>
