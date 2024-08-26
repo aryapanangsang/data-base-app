@@ -229,10 +229,11 @@ class ApplicantResource extends Resource
                 //     $tgl_daftar = Carbon::create($order->created_at);
                 //     return $tgl_daftar->isoFormat('D MMMM Y');
                 // }),
+                
                 Tables\Columns\TextColumn::make('noreg')->label('Tanggal Daftar')
                 ->formatStateUsing(function ($state, Applicant $order) {
                     $tgl_daftar = Carbon::create($order->noreg);
-                    return $order->$tgl_daftar->isoFormat('D MMMM Y');
+                    return $tgl_daftar->isoFormat('D MMMM Y');
                 }),
                 Tables\Columns\TextColumn::make('appplicant_name')->label('Nama')
                     ->searchable(),
