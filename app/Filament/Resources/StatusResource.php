@@ -216,9 +216,9 @@ class StatusResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('created_at')->label('Tanggal Daftar')
+                Tables\Columns\TextColumn::make('noreg')->label('Tanggal Daftar')
                 ->formatStateUsing(function ($state, Applicant $order) {
-                    $tgl_daftar = Carbon::create($order->created_at);
+                    $tgl_daftar = Carbon::create($order->noreg);
                     return $tgl_daftar->isoFormat('D MMMM Y');
                 }),
                 TextColumn::make('appplicant_name')->label('Nama')
