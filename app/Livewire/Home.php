@@ -146,9 +146,11 @@ class Home extends Component implements HasForms
                             ->label('Agama')
                             ->required(),
                         TextInput::make('height')
+                            ->label('Tingga Badan')
                             ->required()
                             ->maxLength(3),
                         TextInput::make('weight')
+                            ->label('Berat Badan')
                             ->required()
                             ->maxLength(2),
                         TextInput::make('uniform_size')
@@ -236,6 +238,6 @@ class Home extends Component implements HasForms
         // Alert::success('Frmulir Berhasil Disimpan', 'Silahkan ');
         Mail::to($this->email)->send(new FormSubmitted($data));
         session()->flash('message', 'Formulir Berhasil Dikirim');
-        $this->redirectRoute('website');
+        $this->redirectRoute('success');
     }
 }
