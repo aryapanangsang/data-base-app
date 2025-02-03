@@ -13,6 +13,7 @@ use Filament\Resources\Resource;
 use Filament\Tables\Actions\Action;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Section;
+use Filament\Tables\Actions\BulkAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\DatePicker;
@@ -254,7 +255,25 @@ class StatusResource extends Resource
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),                    
+                    Tables\Actions\DeleteBulkAction::make(),    
+                    BulkAction::make('applicants')
+                            ->label('Update Company & Status')
+                            ->icon('heroicon-o-pencil')
+                            ->form([
+                                       
+                                Select::make('status_id')
+                                    ->label('Select Status')
+                                    ->options(Status::pluck('status_name', 'id'))
+                                    ->required(),
+                            ])
+                            ->action(function ($records, array $data) {
+                                foreach ($records as $record) {
+                                    $record->update([                                        
+                                        'status_id' => $data['status_id'],
+                                    ]);
+                                }
+                            })
+                            ->deselectRecordsAfterCompletion(),                                    
                 ])
             ]);
     }
