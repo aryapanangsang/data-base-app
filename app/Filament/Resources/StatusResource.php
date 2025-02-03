@@ -242,7 +242,7 @@ class StatusResource extends Resource
                 SelectFilter::make('status_id')
                 ->label('Status Progres')                                       
                 ->relationship('status', 'status_name')
-                ->default(1)    
+                 
             ])
             ->actions([
                 Tables\Actions\ViewAction::make(),

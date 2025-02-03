@@ -4,6 +4,8 @@ namespace App\Filament\Resources;
 
 use Filament\Forms;
 use Filament\Tables;
+use App\Models\Status;
+use App\Models\Company;
 use Filament\Forms\Form;
 use App\Models\Applicant;
 use Filament\Tables\Table;
@@ -12,6 +14,7 @@ use Filament\Infolists\Infolist;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Section;
+use Filament\Tables\Actions\BulkAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\DatePicker;
@@ -19,6 +22,7 @@ use Filament\Tables\Filters\SelectFilter;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Exports\ApplicantExporter;
 use Filament\Infolists\Components\TextEntry;
+use Filament\Tables\Actions\BulkActionGroup;
 use Filament\Tables\Actions\ExportAction;   
 use Filament\Actions\Exports\Enums\ExportFormat;
 use App\Filament\Resources\ApplicantResource\Pages;
@@ -234,7 +238,7 @@ class ApplicantResource extends Resource
                 ->formatStateUsing(function ($state, Applicant $order) {
                     $tgl_daftar = Carbon::create($order->noreg);
                     return $tgl_daftar->isoFormat('D MMMM Y');
-                }),
+                })->sortable(),
                 Tables\Columns\TextColumn::make('appplicant_name')->label('Nama')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('gender')->label('Jenis Kelamin'),
@@ -311,8 +315,31 @@ class ApplicantResource extends Resource
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),            
+                    Tables\Actions\DeleteBulkAction::make(),                 
+                        BulkAction::make('applicants')
+                            ->label('Update Company & Status')
+                            ->icon('heroicon-o-pencil')
+                            ->form([
+                                Select::make('company_id')
+                                    ->label('Select Company')
+                                    ->options(Company::pluck('company_name', 'id'))
+                                    ->required(),
+        
+                                Select::make('status_id')
+                                    ->label('Select Status')
+                                    ->options(Status::pluck('status_name', 'id'))
+                                    ->required(),
+                            ])
+                            ->action(function ($records, array $data) {
+                                foreach ($records as $record) {
+                                    $record->update([
+                                        'company_id' => $data['company_id'],
+                                        'status_id' => $data['status_id'],
+                                    ]);
+                                }
+                            })
+                            ->deselectRecordsAfterCompletion(),
+                    ]),                           
             ]);
            
     }
